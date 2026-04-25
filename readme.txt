@@ -1,8 +1,8 @@
 === Agent Ready WP ===
-Contributors: agent-ready-wp
+Contributors: arqamweb
 Tags: ai, wordpress, admin, settings
 Requires at least: 6.0
-Tested up to: 6.6
+Tested up to: 6.9.4
 Requires PHP: 8.0
 Stable tag: 0.1.0
 License: GPLv2 or later
@@ -12,7 +12,7 @@ Provides a single admin page for reviewing agent-readiness status and configurin
 
 == Description ==
 
-Agent Ready WP adds a settings page under `Settings > Agent Ready` where administrators can:
+Agent Ready WP by ArqamWeb (https://arqamweb.com) adds a settings page under `Settings > Agent Ready` where administrators can:
 
 - review the latest scan summary,
 - run a fresh readiness scan,

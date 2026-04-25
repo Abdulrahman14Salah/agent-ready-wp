@@ -5,7 +5,8 @@
  * Version: 0.1.0
  * Requires at least: 6.0
  * Requires PHP: 8.0
- * Author: Agent Ready WP
+ * Author: ArqamWeb
+ * Author URI: https://arqamweb.com
  * License: GPL-2.0+
  * Text Domain: agent-ready-wp
  */
