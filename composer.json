@@ -5,10 +5,10 @@
     "require-dev": {
         "phpunit/phpunit": "^10"
     },
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
-            "Abdo\\AgentReadyWp\\": "src/"
+            "AgentReadyWP\\": "src/"
         }
     },
     "autoload-dev": {
