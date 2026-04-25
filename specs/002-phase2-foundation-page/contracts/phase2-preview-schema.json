@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 2 Preview Summary",
+  "type": "object",
+  "required": ["is_draft", "items"],
+  "properties": {
+    "is_draft": {
+      "type": "boolean",
+      "const": true
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["section_key", "label", "display_value"],
+        "properties": {
+          "section_key": {
+            "type": "string",
+            "enum": [
+              "mcp_server_card",
+              "oauth_discovery",
+              "protected_resource"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "display_value": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "is_draft": true,
+      "items": [
+        {
+          "section_key": "mcp_server_card",
+          "label": "MCP Server Card",
+          "display_value": "Server: Agent Ready WP, Version: 1.0.0, Transport: https://example.com/mcp"
+        },
+        {
+          "section_key": "oauth_discovery",
+          "label": "OAuth Discovery",
+          "display_value": [
+            "Issuer: https://example.com",
+            "Authorization endpoint: https://example.com/oauth/authorize",
+            "Token endpoint: https://example.com/oauth/token"
+          ]
+        }
+      ]
+    }
+  ]

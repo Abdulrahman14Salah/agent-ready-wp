@@ -1,0 +1,23 @@
+{
+  "protected_apis": {
+    "enabled": "1"
+  },
+  "mcp_server_card": {
+    "enabled": "1",
+    "name": "",
+    "version": "",
+    "transport": "not-a-url"
+  },
+  "oauth": {
+    "enabled": "1",
+    "issuer": "bad-url",
+    "authorization_endpoint": "",
+    "token_endpoint": "not-url",
+    "jwks_uri": ""
+  },
+  "protected_resource": {
+    "enabled": "1",
+    "resource": "",
+    "authorization_servers": "invalid-url"
+  }
+}

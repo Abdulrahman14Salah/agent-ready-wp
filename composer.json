@@ -1,0 +1,26 @@
+{
+    "name": "abdo/agent-ready-wp",
+    "description": "Adds an admin settings page for configuring and reviewing agent-readiness signals.",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Abdo\\AgentReadyWp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abdulrahman"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

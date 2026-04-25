@@ -1,0 +1,13 @@
+{
+  "name": "Agent Ready WP",
+  "version": "1.0.0",
+  "transport": {
+    "url": "https://example.com/wp-json/agent-ready/v1/mcp"
+  },
+  "capabilities": {
+    "api_catalog": true,
+    "webmcp": true,
+    "oauth_discovery": true,
+    "protected_resource": true
+  }
+}

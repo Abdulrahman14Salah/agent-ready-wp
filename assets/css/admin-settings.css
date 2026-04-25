@@ -1,0 +1,140 @@
+.arwp-settings-page .arwp-page-actions {
+  margin: 1rem 0;
+}
+
+.arwp-settings-page .arwp-summary-card,
+.arwp-settings-page .arwp-panel,
+.arwp-settings-page .arwp-phase-two-sections {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.arwp-settings-page .arwp-summary-groups {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arwp-settings-page .arwp-summary-groups li,
+.arwp-settings-page .arwp-placeholder {
+  margin-top: 0.5rem;
+}
+
+.arwp-settings-page .arwp-control {
+  margin: 0.75rem 0;
+}
+
+.arwp-settings-page .arwp-inline-checkbox {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.arwp-settings-page .arwp-preview {
+  margin-top: 1rem;
+  color: #50575e;
+}
+
+.arwp-state-pass {
+  color: #00a32a;
+}
+
+.arwp-state-partial {
+  color: #b26200;
+}
+
+.arwp-state-fail {
+  color: #d63638;
+}
+
+.arwp-state-neutral {
+  color: #646970;
+}
+
+.arwp-settings-page input[disabled],
+.arwp-settings-page select[disabled],
+.arwp-settings-page textarea[disabled] {
+  opacity: 0.7;
+}
+
+.arwp-settings-page .arwp-phase-two-sections {
+  border-left: 4px solid #2271b1;
+}
+
+.arwp-settings-page .arwp-phase-two-guidance {
+  background: #f6f7f7;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.arwp-settings-page .arwp-phase-two-guidance h3 {
+  margin-top: 0;
+}
+
+.arwp-settings-page .arwp-phase-two-guidance ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.arwp-settings-page .arwp-phase2-section {
+  position: relative;
+}
+
+.arwp-settings-page .arwp-phase2-section-disabled {
+  border-style: dashed;
+  background: #f9f9fa;
+}
+
+.arwp-settings-page .arwp-phase2-disabled-reason {
+  margin: 0.5rem 0;
+  color: #50575e;
+  font-weight: 600;
+}
+
+.arwp-settings-page .arwp-phase2-missing {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.arwp-settings-page .arwp-field-error {
+  color: #b32d2e;
+  margin: 0.4rem 0 0;
+  font-weight: 600;
+}
+
+.arwp-settings-page .arwp-control-has-error input,
+.arwp-settings-page .arwp-control-has-error textarea {
+  border-color: #d63638;
+  box-shadow: 0 0 0 1px #d63638;
+}
+
+.arwp-settings-page .arwp-phase2-preview {
+  background: #f6f7f7;
+}
+
+.arwp-settings-page .arwp-phase2-preview-items {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.arwp-settings-page .arwp-phase2-preview-item {
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 782px) {
+  .arwp-settings-page .arwp-inline-checkbox {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .arwp-settings-page .arwp-panel input[type='url'],
+  .arwp-settings-page .arwp-panel input[type='text'],
+  .arwp-settings-page .arwp-panel textarea {
+    width: 100%;
+  }
+}

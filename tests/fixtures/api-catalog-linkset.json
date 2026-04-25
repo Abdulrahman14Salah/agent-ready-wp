@@ -1,0 +1,11 @@
+{
+  "links": [
+    {
+      "anchor": "https://example.com/",
+      "href": "https://example.com/wp-json/",
+      "rel": "service-desc",
+      "title": "WordPress REST API",
+      "source": "wordpress"
+    }
+  ]
+}

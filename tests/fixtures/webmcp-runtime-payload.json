@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "search",
+      "label": "search",
+      "route": "https://example.com/wp-json/wp/v2/search",
+      "enabled": true,
+      "requires_woocommerce": false
+    }
+  ],
+  "siteUrl": "https://example.com/",
+  "restRoot": "https://example.com/wp-json/",
+  "capabilityCheck": "navigator.mcp.registerTool"
+}

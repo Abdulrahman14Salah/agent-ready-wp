@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com",
+  "score": 33,
+  "level": 1,
+  "level_name": "Basic Web Presence",
+  "checks": {
+    "markdown": {
+      "label": "Markdown Negotiation",
+      "status": "fail",
+      "group": "Content"
+    },
+    "api_catalog": {
+      "label": "API Catalog",
+      "status": "pass",
+      "group": "Discoverability"
+    }
+  },
+  "scanned_at": "2026-04-23T17:41:26Z"
+}

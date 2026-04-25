@@ -1,0 +1,41 @@
+# Dependencies installed locally.
+/vendor/
+/node_modules/
+
+# Build, coverage, and generated artifacts.
+/build/
+/dist/
+/coverage/
+/tmp/
+/.phpunit.cache/
+.phpunit.result.cache
+*.cache
+*.log
+*.tmp
+
+# Local environment and secret files.
+.env
+.env.*
+!.env.example
+wp-config.php
+
+# Composer and tooling local overrides.
+/composer.phar
+/phpcs.xml
+/phpunit.xml
+
+# IDE/editor files.
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# OS metadata.
+.DS_Store
+Thumbs.db
+
+# WordPress packaged archives.
+*.zip
+*.tar
+*.tar.gz

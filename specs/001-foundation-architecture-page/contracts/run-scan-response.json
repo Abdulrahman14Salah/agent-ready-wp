@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Run Scan Response",
+  "type": "object",
+  "required": ["success", "message"],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": ["object", "null"],
+      "required": [
+        "score",
+        "level",
+        "level_name",
+        "scanned_at",
+        "groups"
+      ],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "level_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scanned_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "passed", "total", "state"],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "passed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "state": {
+                "type": "string",
+                "enum": ["pass", "partial", "fail"]
+              },
+              "primary_linked_panel": {
+                "type": ["string", "null"]
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "success": true,
+      "message": "Scan complete.",
+      "summary": {
+        "score": 33,
+        "level": 1,
+        "level_name": "Basic Web Presence",
+        "scanned_at": "2026-04-23T17:41:26Z",
+        "groups": [
+          {
+            "label": "Discoverability",
+            "passed": 3,
+            "total": 3,
+            "state": "pass",
+            "primary_linked_panel": null
+          },
+          {
+            "label": "Content",
+            "passed": 0,
+            "total": 1,
+            "state": "fail",
+            "primary_linked_panel": "markdown"
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "success": false,
+      "message": "Scan failed. Showing last known results.",
+      "summary": null,
+      "errors": [
+        "Remote scan request timed out."
+      ]
+    }
+  ]

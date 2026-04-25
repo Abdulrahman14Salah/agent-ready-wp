@@ -1,0 +1,6 @@
+{
+  "resource": "https://example.com/wp-json/agent-ready/v1",
+  "authorization_servers": [
+    "https://auth.example.com"
+  ]
+}

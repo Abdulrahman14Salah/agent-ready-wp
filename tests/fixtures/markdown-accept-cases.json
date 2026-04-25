@@ -1,0 +1,22 @@
+[
+  {
+    "name": "markdown-highest",
+    "accept": "text/markdown, text/html;q=0.9",
+    "expects_markdown": true
+  },
+  {
+    "name": "markdown-tied-highest",
+    "accept": "text/html;q=0.8, text/markdown;q=0.8",
+    "expects_markdown": true
+  },
+  {
+    "name": "html-preferred",
+    "accept": "text/html, text/markdown;q=0.5",
+    "expects_markdown": false
+  },
+  {
+    "name": "markdown-missing",
+    "accept": "text/html, application/xhtml+xml",
+    "expects_markdown": false
+  }
+]

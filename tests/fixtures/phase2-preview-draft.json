@@ -1,0 +1,28 @@
+{
+  "is_draft": true,
+  "items": [
+    {
+      "section_key": "mcp_server_card",
+      "label": "MCP Server Card",
+      "display_value": "Server: Agent Ready WP, Version: 1.0.0, Transport: https://example.com/mcp"
+    },
+    {
+      "section_key": "oauth_discovery",
+      "label": "OAuth Discovery",
+      "display_value": [
+        "Issuer: https://example.com",
+        "Authorization endpoint: https://example.com/oauth/authorize",
+        "Token endpoint: https://example.com/oauth/token",
+        "JWKS URI: https://example.com/.well-known/jwks.json"
+      ]
+    },
+    {
+      "section_key": "protected_resource",
+      "label": "Protected Resource",
+      "display_value": [
+        "Resource: https://example.com/resource",
+        "Authorization server: https://auth.example.com"
+      ]
+    }
+  ]
+}
