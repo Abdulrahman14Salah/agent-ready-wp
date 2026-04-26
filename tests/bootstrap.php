@@ -141,6 +141,7 @@ if (! function_exists('get_option')) {
 if (! function_exists('update_option')) {
     function update_option(string $name, $value): bool
     {
+        $value = apply_filters('sanitize_option_' . $name, $value, $name, null);
         $GLOBALS['arwp_test_options'][$name] = $value;
         $GLOBALS['arwp_test_update_option_calls'] = (int) ($GLOBALS['arwp_test_update_option_calls'] ?? 0) + 1;
         return true;

@@ -19,6 +19,7 @@ final class SettingsPageRegressionTest extends TestCase
     protected function setUp(): void
     {
         $GLOBALS['arwp_test_options'] = [];
+        $GLOBALS['arwp_test_update_option_calls'] = 0;
         arwp_tests_reset_request();
         arwp_tests_set_current_user_can(true);
     }
@@ -73,6 +74,48 @@ final class SettingsPageRegressionTest extends TestCase
 
         $this->assertIsArray($settings);
         $this->assertArrayHasKey('markdown', $settings);
+    }
+
+    public function test_settings_sanitize_callback_does_not_persist_options(): void
+    {
+        $page = $this->createPage();
+
+        $settings = $page->sanitizeSettings([
+            'mcp_server_card' => [
+                'enabled' => '1',
+                'name' => '',
+                'version' => '',
+                'transport' => '',
+            ],
+        ]);
+
+        $this->assertIsArray($settings);
+        $this->assertSame(0, (int) $GLOBALS['arwp_test_update_option_calls']);
+    }
+
+    public function test_custom_save_flow_does_not_recurse_when_wordpress_runs_sanitize_option_filter(): void
+    {
+        $page = $this->createPage();
+        $previousFilters = $GLOBALS['arwp_test_filters'];
+        add_filter('sanitize_option_agent_ready_wp_settings', [$page, 'sanitizeSettings'], 10, 1);
+
+        $_POST = [
+            'arwp_save_settings' => '1',
+            'arwp_settings_nonce' => 'nonce',
+            'agent_ready_wp_settings' => [],
+        ];
+
+        try {
+            ob_start();
+            $page->render();
+            $html = (string) ob_get_clean();
+        } finally {
+            $GLOBALS['arwp_test_filters'] = $previousFilters;
+        }
+
+        $this->assertSame(1, (int) $GLOBALS['arwp_test_update_option_calls']);
+        $this->assertStringContainsString('Settings saved.', $html);
+        $this->assertIsArray(get_option('agent_ready_wp_settings', []));
     }
 
     private function createPage(): SettingsPage

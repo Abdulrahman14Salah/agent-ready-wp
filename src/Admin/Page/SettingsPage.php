@@ -51,13 +51,7 @@ final class SettingsPage
             $input = [];
         }
 
-        $result = $this->settingsRepository->validateAndUpdate($input);
-
-        if (! empty($result['success']) && $this->settingsRepository->apiCatalogChanged()) {
-            flush_rewrite_rules();
-        }
-
-        return (array) $result['settings'];
+        return $this->settingsRepository->sanitizeForStorage($input);
     }
 
     public function render(): void
