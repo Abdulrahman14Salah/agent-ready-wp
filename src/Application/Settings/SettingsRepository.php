@@ -33,6 +33,11 @@ final class SettingsRepository
         return (array) $result['settings'];
     }
 
+    public function sanitizeForStorage(array $input): array
+    {
+        return $this->normalize($this->sanitizer->sanitize($input, $this->get()));
+    }
+
     /**
      * @return array{
      *   success: bool,
